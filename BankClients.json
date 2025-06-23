@@ -1,0 +1,26 @@
+[
+  {
+    "LastName": "Мокрушин",
+    "FirstName": "Артем",
+    "SurName": "Владимирович",
+    "AccountNumber": "958387489323",
+    "Balance": 120000,
+    "DateRegistration": "2025-05-01T00:00:00"
+  },
+  {
+    "LastName": "Мокрушина",
+    "FirstName": "Екатерина",
+    "SurName": "Андреевна",
+    "AccountNumber": "958347582039",
+    "Balance": 250000,
+    "DateRegistration": "2025-06-01T00:00:00"
+  },
+  {
+    "LastName": "Остапенко",
+    "FirstName": "Оксана",
+    "SurName": "Александровна",
+    "AccountNumber": "753521356545",
+    "Balance": 50000,
+    "DateRegistration": "2025-06-01T00:00:00"
+  }
+]

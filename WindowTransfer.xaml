@@ -1,0 +1,60 @@
+﻿<Window x:Class="BankClients.WindowTransfer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankClients"
+        mc:Ignorable="d"
+        Title="Перевод между счета" Height="400" Width="569" Loaded="WindowTransfer_Loaded">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="MinWidth" Value="60" />
+            <Setter Property="Margin" Value="8" />
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="10" Width="400">
+            <TextBlock Text="Счет отправителя" />
+            
+            <ComboBox Name="AccountSenderList"
+          ItemsSource="{Binding AccountsMain}"
+          DisplayMemberPath="AccountNumber"
+             SelectedItem="{Binding accountSenderMain}"/>
+
+            <Button Content="Поменять местами" Margin="10" Click="ChangeAccount" Width="150" Height="30" />
+            
+            <TextBlock Text="Счет получателя" />
+           
+            <ComboBox Name="AccountRecipientList"
+ItemsSource="{Binding AccountsMain}"
+DisplayMemberPath="AccountNumber"
+   SelectedItem="{Binding accountRecipientMain}"/>
+
+            <TextBlock Text="Сумма перевода" />
+            <TextBox Name="Summa" FontSize="16" />
+
+            <Button Content="Перевести" Margin="10" Click="TransferMoney" Width="150" Height="30" />
+
+            
+        </StackPanel >
+    </Grid>
+    
+</Window>
